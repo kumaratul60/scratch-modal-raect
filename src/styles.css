@@ -1,0 +1,65 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.modal-wrapper {
+  position: fixed;
+  max-width: 500px;
+  width: 100%;
+  padding: 10px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.4);
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 999999;
+  background-color: #fff;
+  border-radius: 0.5rem;
+}
+
+@keyframes slide {
+  from {
+    transform: translate(-50%, -200%);
+  }
+  to {
+    transform: translate(-50%, -50%);
+  }
+}
+
+.modal-wrapper.active {
+  animation-name: slide;
+  animation-duration: 0.4s;
+}
+
+.modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.modal-close {
+  color: blueviolet;
+  /* border: 1px solid blue; */
+  width: 30px;
+  height: 30px;
+  background: skyblue;
+  line-height: 30px;
+  padding: 5px;
+  border-radius: 50%;
+  font-size: 1.2em;
+}
+.modal-header :hover {
+  cursor: pointer;
+  color: cornflowerblue;
+  background: pink;
+}
+
+.modal-backdrop {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  /* background-color: rgba(0, 0, 0, 0.2); */
+  background: rgba(0, 0, 0, 0.2);
+  z-index: 0;
+}
